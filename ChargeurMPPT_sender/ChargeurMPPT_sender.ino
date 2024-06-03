@@ -52,7 +52,7 @@ const char *dataFile = "/data.csv";
 const char *logFile = "/log.txt";
 const char *header = "TIMESTAMP,TEMP,HUM,LUM,PRES,PV_V,PV_I,PV_W,BAT_V,BAT_I,BAT_w\n";
 const char *logHeader = "--- ESP32 LOG FILE ---\n";
-// Modify these 2 constants to change the data sampling frequency
+// Modify these 3 constants to change the data sampling frequency
 const uint8_t recordings_per_minute = 4;
 const uint8_t minutes_per_send = 1;
 const uint8_t sensor_reading_time_seconds = 5;

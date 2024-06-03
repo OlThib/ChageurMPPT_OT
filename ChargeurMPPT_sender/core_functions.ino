@@ -27,11 +27,8 @@ void myPrint(char* buf) {
 // This function applies a numeric filtering to the sensor reading values by taking a percentage
 // of the new value and adding it to (1 minus that percentage) of the latest value
 float num_fltr(float new_value, float last_value) {
-  if (isnan(new_value) || isnan(last_value)) {
-    return 0.0F;
-  } else {
-    return new_value * alpha + last_value * (1 - alpha);
-  }
+  if (isnan(new_value) || isnan(last_value)) { return 0.0F; }
+  else { return new_value * alpha + last_value * (1 - alpha); }
 }
 //-----------------------------------------------------------------------
 

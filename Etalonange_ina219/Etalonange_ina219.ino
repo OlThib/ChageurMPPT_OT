@@ -8,11 +8,6 @@
 #include <Adafruit_INA219.h>
 #include <Average.h>
 #include <Wire.h>
-#include <DS3231.h>
-
-
-const char* SSID_1 = "Network name";
-const char* PWD_1 = "Network password";
 
 Adafruit_INA219 ina_pv(INA_PV_ADDRESS);
 Adafruit_INA219 ina_bat(INA_BAT_ADDRESS);
@@ -31,8 +26,6 @@ void setup() {
   delay(1000);
   ina_pv.begin();
   ina_bat.begin();
-  Wire.begin();
-  Clock.setClockMode(false);
 }
 
 void loop() {
